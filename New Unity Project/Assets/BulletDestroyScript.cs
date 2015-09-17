@@ -11,7 +11,7 @@ public class BulletDestroyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Destroy () {
-		gameObject.SetActive (false);
+		gameObject.SetActive(false);
 	}
 
 	void OnDisable()

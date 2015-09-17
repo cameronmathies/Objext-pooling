@@ -7,7 +7,7 @@ public class BulletScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Input.GetKey(KeyCode.Space);
+	//	Input.GetKey(KeyCode.Space);
 		transform.Translate (0, speed * Time.deltaTime, 0);
 	}
 }

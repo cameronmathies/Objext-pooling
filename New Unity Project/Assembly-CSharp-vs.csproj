@@ -49,6 +49,7 @@
      <Compile Include="Assets\BulletDestroyScript.cs" />
      <Compile Include="Assets\BulletFireScript.cs" />
      <Compile Include="Assets\BulletScript.cs" />
+     <Compile Include="Assets\NewObjectsPooling.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
