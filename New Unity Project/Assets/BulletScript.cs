@@ -9,5 +9,6 @@ public class BulletScript : MonoBehaviour {
 	void Update () {
 	//	Input.GetKey(KeyCode.Space);
 		transform.Translate (0, speed * Time.deltaTime, 0);
+		//InvokeRepeating ("Update", speed, speed);
 	}
 }

@@ -5,37 +5,40 @@ using System.Collections.Generic;
 public class BulletFireScript : MonoBehaviour {
 
 	public float fireTime = .05f;
-//	public GameObject bullet;
-//
-//	public int pooledAmount = 20;
-//	List<GameObject> bullets;
+	public float reload = 10f;
+	public GameObject bullet;
+
+	public int pooledAmount = 20;
+	List<GameObject> bullets;
 
 	// Use this for initialization
 	void Start () {
-//		bullets = new List<GameObject> ();
-//		for(int i = 0; i < pooledAmount; i++) {
-//			GameObject obj = (GameObject)Instantiate(bullet);
-//			obj.SetActive(false);
-//			bullets.Add(obj);
-//		}
+		bullets = new List<GameObject> ();
+		for(int i = 0; i < pooledAmount; i++) {
+			GameObject obj = (GameObject)Instantiate(bullet);
+			obj.SetActive(false);
+			bullets.Add(obj);
+		}
 
-			InvokeRepeating ("Fire", fireTime, fireTime);
+		InvokeRepeating ("Fire", fireTime, reload);
 
 	}
 	
 	// Update is called once per frame
 	void Fire () {
-//		for(int i = 0; i < bullets.Count; i++)
-//		{
-//			if(!bullets[i].activeInHierarchy)
-//			{	
-		GameObject obj = NewObjectsPooling.current.GetPooledObject();
+		for(int i = 0; i < bullets.Count; i++)
+		{
+			if(!bullets[i].activeInHierarchy)
+			{	
+		
 
-		if (obj == null) return;
+				if (!bullets[i].activeInHierarchy)
 
-		obj.transform.position = transform.position;
-		obj.transform.rotation = transform.rotation;
-		obj.SetActive(true);
+				bullets[i].transform.position = transform.position;
+				bullets[i].transform.rotation = transform.rotation;
+				bullets[i].SetActive(true);
 		break;
 }
+}
+	}
 }
