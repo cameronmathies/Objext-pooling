@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class BulletFireScript : MonoBehaviour {
 
 	public float fireTime = .05f;
-	public float reload = 10f;
+	public float reload = .05f;
 	public GameObject bullet;
 
 	public int pooledAmount = 20;
@@ -20,7 +20,7 @@ public class BulletFireScript : MonoBehaviour {
 			bullets.Add(obj);
 		}
 
-		InvokeRepeating ("Fire", fireTime, reload);
+		InvokeRepeating ("Fire", fireTime, fireTime);
 
 	}
 	
